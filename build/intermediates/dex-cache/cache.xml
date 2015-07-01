@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-68aa0fa881e48784169a532b50dafc500d55314e.jar" />
+    </item>
+    <item
+        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-a1c64acfc7f6dfb7d4c726d546db63019c4c2450.jar" />
+    </item>
+    <item
+        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-199cb645d31529d7ea73a89e5352e749cbe136c5.jar" />
+    </item>
+    <item
+        jar="/Users/charlie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-6f678eb804e62aaed07f881f589fe5a15e3b6b9c.jar" />
+    </item>
+    <item
+        jar="/Users/charlie/AndroidStudioProjects/Directory/app/libs/Parse-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fe739334780fe321141e62720822c2d456061899">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/Parse-1.9.2-a1417c5a6806ee5b0dc746dd4be8aa010d54b8bd.jar" />
+    </item>
+    <item
+        jar="/Users/charlie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-801ce85770287fe036a248c9a7295801f8934b73.jar" />
+    </item>
+
+</items>
