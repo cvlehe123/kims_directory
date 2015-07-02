@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -25,6 +26,7 @@ import java.util.List;
 
 public class Directory extends ActionBarActivity {
     private static final String TAG = "Directory";
+    private  static SearchView mSearchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +93,19 @@ public class Directory extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_directory, menu);
+            mSearchView = (SearchView)menu.findItem(R.id.search_view).getActionView();
+            mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(String query) {
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(String newText) {
+                    Log.d(TAG,newText);
+                    return true;
+                }
+            });
         return true;
 
     }
@@ -103,7 +118,7 @@ public class Directory extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.search_view) {
             return true;
         }
 
