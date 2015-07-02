@@ -5,8 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -15,6 +19,7 @@ import com.parse.ParseQuery;
 
 import java.lang.reflect.Array;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,7 +48,7 @@ public class Directory extends ActionBarActivity {
                     business.title = object.getString("title");
                     business.address = object.getString("address");
                     business.phone = object.getString("phone");
-                    business.vignette = object.getString("vignette");
+                   // business.vignette = object.getString("description");
 
 
                     array[i] = business;
@@ -54,19 +59,32 @@ public class Directory extends ActionBarActivity {
                     Log.d(TAG, currentBusiness.title);
                 }
                 ListView listView = (ListView)findViewById(R.id.charleston_directory);
-                listView.setAdapter(new ArrayAdapter<String>());
+                listView.setAdapter(new TaskAdapter(array));
 
 
-            }
-            class NewClass extends ArrayAdapter<String>{
-                NewClass(Business[] businesses){
-                    super(Directory.this, android.R.layout.simple_list_item_1, businesses);
-                }
             }
 
 
 
         });
+    }
+
+    private class TaskAdapter extends ArrayAdapter<Business> {
+        TaskAdapter(Business[] businesses){
+            super(Directory.this, R.layout.business_list_row,R.id.business_name, businesses);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            convertView =  super.getView(position, convertView, parent);
+            Business task = getItem(position);
+            TextView taskName = (TextView)convertView.findViewById(R.id.business_name);
+            TextView businessDescription = (TextView)convertView.findViewById(R.id.business_descripton);
+            taskName.setText(task.title);
+            businessDescription.setText(task.vignette);
+
+            return convertView;
+        }
     }
 
         @Override
