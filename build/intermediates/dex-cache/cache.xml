@@ -2,46 +2,81 @@
 <items version="2" >
 
     <item
-        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jar="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-68aa0fa881e48784169a532b50dafc500d55314e.jar" />
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-0230e6d27ac2ae10a4d76c81581a946e8095a444.jar" />
     </item>
     <item
-        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/jars/classes.jar"
+        jar="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-a1c64acfc7f6dfb7d4c726d546db63019c4c2450.jar" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/classes-28a3346b77a3a6f233710b45ddf723c577a72325.jar" />
     </item>
     <item
-        jar="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jar="/home/kim/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-199cb645d31529d7ea73a89e5352e749cbe136c5.jar" />
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-9e7027c5d7c1d927bd72ec306f780d9df22e2af5.jar" />
     </item>
     <item
-        jar="/Users/charlie/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-6f678eb804e62aaed07f881f589fe5a15e3b6b9c.jar" />
-    </item>
-    <item
-        jar="/Users/charlie/AndroidStudioProjects/Directory/app/libs/Parse-1.9.2.jar"
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/Parse-1.9.2.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="fe739334780fe321141e62720822c2d456061899">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/Parse-1.9.2-a1417c5a6806ee5b0dc746dd4be8aa010d54b8bd.jar" />
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/Parse-1.9.2-8d427b6302aa34e78ab3ddf42e62d3c4fbf3252d.jar" />
     </item>
     <item
-        jar="/Users/charlie/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="/Users/charlie/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-801ce85770287fe036a248c9a7295801f8934b73.jar" />
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-eea853494efa0eae55850714b3d03a67126fa528.jar" />
+    </item>
+    <item
+        jar="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-ccc190a6f496d16294289137f95ba69b85d3f1ab.jar" />
+    </item>
+    <item
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/bolts-android-1.2.0-javadoc.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0b98cf117d6ed838f776a7f0765c7f04191d7b8e">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-javadoc-8f4a4e0bf8724b05d1c67c755864ec7b948981b6.jar" />
+    </item>
+    <item
+        jar="/home/kim/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-aa8e59fe7a97f1986d30a677d56a0dd4b2e06447.jar" />
+    </item>
+    <item
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/ParseCrashReporting-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="83f3b1e397f1cc3f05cb9db078d9e364b5f5e218">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.2-14dd1ac6677fb1015eaa4c29f4fd01efc64728c6.jar" />
+    </item>
+    <item
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/ParseFacebookUtilsV4-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bab281cc21f6a68152e11ab53b053790ccfd6764">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/ParseFacebookUtilsV4-1.9.2-16c9dd6efcf92c385016b8f021a8b50b9001e205.jar" />
+    </item>
+    <item
+        jar="/home/kim/AndroidStudioProjects/Directory/app/libs/ParseFacebookUtilsV3-1.9.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01898977512a5c947d9ec003a4596be207ebe684">
+        <dex dex="/home/kim/AndroidStudioProjects/Directory/app/build/intermediates/pre-dexed/debug/ParseFacebookUtilsV3-1.9.2-4ac674ca1fd50a6ce90487eb007c843e5c8fb8e1.jar" />
     </item>
 
 </items>

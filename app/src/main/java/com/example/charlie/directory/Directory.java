@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -19,15 +19,17 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.lang.reflect.Array;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 
+//declare class variables
 public class Directory extends ActionBarActivity {
     private static final String TAG = "Directory";
     private  static SearchView mSearchView;
-
+    Business[] mArray;
+    Business[] mSearchResults;
+    ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,29 +41,35 @@ public class Directory extends ActionBarActivity {
         Parse.initialize(this, "uXsrr08tw31RhuIQO8LRpW3b6aKfvUYGf4h6NCev", "SXUM4CuMPN2i4tDRTBIRXbE0KE9ZGqaHDUBqmqfs");
 
 
+        //fetch data from parse
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Business");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> list, com.parse.ParseException e) {
-                Business[] array = new Business[list.size()];
+                mArray = new Business[list.size()];
+                mSearchResults = mArray; //resets search results
+
+                /*for loop fetches every cell in database */
                 for (int i = 0; i < list.size(); i++) {
                     ParseObject object = list.get(i);
                     Business business = new Business();
                     business.title = object.getString("title");
                     business.address = object.getString("address");
-                    business.phone = object.getString("phone");
-                   // business.vignette = object.getString("description");
+                    business.phone = object.getString("phoneNumber");
+                    business.vignette = object.getString("description");
+                    business.website = object.getString("website");
 
 
-                    array[i] = business;
+                    mArray[i] = business;
 
                 }
-                for (int i = 0; i <Array.getLength(array); i++) {
-                    Business currentBusiness = array[i];
+                /*ASK CHARLIE TO EXPLAIN THIS FOR LOOP */
+                for (int i = 0; i <Array.getLength(mArray); i++) {
+                    Business currentBusiness = mArray[i];
                     Log.d(TAG, currentBusiness.title);
                 }
-                ListView listView = (ListView)findViewById(R.id.charleston_directory);
-                listView.setAdapter(new TaskAdapter(array));
+                mListView = (ListView)findViewById(R.id.charleston_directory);
+                mListView.setAdapter(new TaskAdapter(mSearchResults));//ASK CHARLIE TO EXPLAIN
 
 
             }
@@ -81,9 +89,16 @@ public class Directory extends ActionBarActivity {
             convertView =  super.getView(position, convertView, parent);
             Business task = getItem(position);
             TextView taskName = (TextView)convertView.findViewById(R.id.business_name);
-            TextView businessDescription = (TextView)convertView.findViewById(R.id.business_descripton);
+            //TextView businessDescription = (TextView)convertView.findViewById(R.id.business_descripton);
+            //TextView businessWebsite = (TextView)convertView.findViewById(R.id.business_website);
+            TextView businessPhone = (TextView)convertView.findViewById(R.id.business_phone);
+            TextView businessAddress = (TextView)convertView.findViewById(R.id.business_address);
+
             taskName.setText(task.title);
-            businessDescription.setText(task.vignette);
+            //businessDescription.setText(task.vignette);
+            //businessWebsite.setText(task.website);
+            businessPhone.setText(task.phone);
+            businessAddress.setText(task.address);
 
             return convertView;
         }
@@ -93,17 +108,20 @@ public class Directory extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_directory, menu);
-            mSearchView = (SearchView)menu.findItem(R.id.search_view).getActionView();
+          mSearchView = (SearchView)menu.findItem(R.id.search_view).getActionView();
             mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query) {
-                    return false;
+                    Log.d(TAG,query);
+
+                    loadListFromSearch(query);
+                    return true;
                 }
 
                 @Override
                 public boolean onQueryTextChange(String newText) {
-                    Log.d(TAG,newText);
-                    return true;
+
+                    return false;
                 }
             });
         return true;
@@ -123,5 +141,47 @@ public class Directory extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void loadListFromSearch (String query) {
+        List<Business> businessList = new ArrayList<Business>();
+
+        for (int i = 0; i< Array.getLength(mArray); i++){
+            if (mArray[i].title.toLowerCase().contains(query.toLowerCase())) {
+                Log.d(TAG, "title checks out"+mArray[i].title);
+                businessList.add(mArray[i]);
+
+            }else if (mArray[i].phone.toLowerCase().contains(query.toLowerCase())) {
+                Log.d(TAG, "phone number checks out");
+                businessList.add(mArray[i]);
+
+            }else if (mArray[i].address.toLowerCase().contains(query.toLowerCase())) {
+                Log.d(TAG, "address checks out");
+                businessList.add(mArray[i]);
+
+            }else if (mArray[i].vignette.toLowerCase().contains(query.toLowerCase())) {
+                Log.d(TAG, "description checks out");
+                businessList.add(mArray[i]);
+
+            }else if (mArray[i].website.toLowerCase().contains(query.toLowerCase())){
+                Log.d(TAG, "website checks out"+mArray[i].website);
+                businessList.add(mArray[i]);
+
+
+
+            }
+
+
+        }
+
+        if (businessList.size() == 0) {
+            Log.d(TAG, "Sorry no results found");
+            Toast.makeText(Directory.this,"Search completed. No results found",Toast.LENGTH_LONG)
+                    .show();
+        }else {
+            mSearchResults = new Business[businessList.size()];//creates new business list
+            mSearchResults = businessList.toArray(mSearchResults);//converts list back into an array
+            mListView.setAdapter(new TaskAdapter(mSearchResults)); //reloads for a fresh search
+        }
     }
 }

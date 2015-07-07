@@ -9,6 +9,7 @@ public class Business {
     public String address = "";
     public String phone = "";
     public String vignette = "";
+    public String website = "";
 
 
 }

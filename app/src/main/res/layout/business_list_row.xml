@@ -12,11 +12,21 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"/>
     <TextView
-        android:id="@+id/business_descripton"
+        android:id="@+id/business_phone"
         android:text="yessh"
         android:layout_weight="100"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/business_address"
+        android:text="yessh"
+        android:layout_weight="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"/>
+
+
+
 
 </LinearLayout>

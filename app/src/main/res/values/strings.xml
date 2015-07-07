@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Directory</string>
-
+    <string name="search">Search</string>
     <string name="hello_world">herrroo there world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Main</string>
+    <string name="app_brand_name">Name of App</string>
+    <string name="pithy_saying">Pithy remark here</string>
 </resources>
